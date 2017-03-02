@@ -8,7 +8,7 @@ import time
 from datetime import datetime as dt
 
 hosts_temp = "hosts"
-hosts_path = r"C:\Windows\System32\drivers\etc"
+hosts_path = r"C:\Windows\System32\drivers\etc\hosts"
 #r"string": r stands for row so if we have \n in it. it's part of string
 # but without r \n will be read as newline
 
@@ -27,13 +27,13 @@ end_hr = 16
 while True:
     if dt(year, month, day, start_hr) < dt.now() < dt(year, month, day, end_hr):
         print("Working hours")
-        file = open(hosts_temp, "r+")
+        file = open(hosts_path, "r+")
         content = file.read()
         for website in website_list:
             if not website in content:
                 file.write(redirect + "       " + website + "\n")
     else: 
-        file = open(hosts_temp, "r+")
+        file = open(hosts_path, "r+")
         content = file.readlines()
         file.seek(0)
         for line in content:
