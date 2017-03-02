@@ -1,25 +1,27 @@
 # Small-Python-apps
 
-### 1. Website blocker for specific hours of a day
+### 1. Block facebook in working hours
 
-We will access the host file of system and add the desired websites in it to block those sites in working hours and then again unblock the websites after working hours
+We access the host file of system and add the desired websites in it to block those sites in working hours and then again unblock the websites after working hours
 
-We converted the .py file to .pyw file to run it in background
+We convert the .py file to .pyw file to run it in background
 
-To run it as soon as the computer start we will add it in Task Scheduler for windows:
+To run it as soon as the computer starts we add it in Task Scheduler for windows:
 
 1. Open Task Scheduler
 
-2. Check the run this highest privileges box
+2. Create Task
 
-3. Go to trigers -> New -> At startup
+3. Check the run this highest privileges box and select window configuration 
 
-4. Go to actions -> New -> Start a program and point the program script
+4. Go to trigers -> New -> At startup
 
-5. Now go to conditions -> uncheck the power options
+5. Go to actions -> New -> Start a program -> Browse: point to program script
 
-6. Okay
+6. Now go to conditions -> uncheck the power options
 
-7. Click on the Run at left side of task scheduler
+7. Our script is stacked in the task scheduler
 
-8. and out website blocker is running
+8. Select your newly created task and click on Run
+
+9. and our website blocker is running
