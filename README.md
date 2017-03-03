@@ -40,3 +40,15 @@ Flask detects the changes in file and restarts the web app so you don't need to 
 
 Create templates folder in current directory and save your html file templates.
 
+To deploy our project online we need to intall virtualenv to run the required lib like flask and run python etc
+
+<code>pip install virtualenv</code>
+
+Create a virtual environment to get all the libs and other required files to deploy the site online
+
+Place all the files in one folder and same level folder using cmd <code>python -m venv virtual</code>
+
+Now we need to install the flask in our virtual python environment so open the virtual folder's python file and install flask via pip
+
+Add the required files and push to live serve in my case I uploaded it on herko with cmd
+
