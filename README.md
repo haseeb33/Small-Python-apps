@@ -25,3 +25,16 @@ To run it as soon as the computer starts we add it in Task Scheduler for windows
 8. Select your newly created task and click on Run
 
 9. and our website blocker is running
+
+### 2. Build a website wit python and flask
+
+To install flask:
+
+<code>pip install flask</code>
+
+Run the script1.py and check the http://localhost:5000/ in your browser.
+
+and http://localhost:5000/about/ to see the about page
+
+Flask detects the changes in file and restarts the web app so you don't need to run it everytime you change something
+
