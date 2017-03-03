@@ -26,7 +26,7 @@ To run it as soon as the computer starts we add it in Task Scheduler for windows
 
 9. and our website blocker is running
 
-### 2. Build a website wit python and flask
+### 2. Build a website wit flask
 
 To install flask:
 
@@ -36,5 +36,7 @@ Run the script1.py and check the http://localhost:5000/ in your browser.
 
 and http://localhost:5000/about/ to see the about page
 
-Flask detects the changes in file and restarts the web app so you don't need to run it everytime you change something
+Flask detects the changes in file and restarts the web app so you don't need to run it everytime just save the script
+
+Create templates folder in current directory and save your html file templates.
 
