@@ -54,4 +54,4 @@ Add the required files and push to live serve in my case I uploaded it on herko 
 
 ### 3. WebCam montion detection record time
 
-This program records the time for an object moving in front of webcam. opencv provides alot a cool image processing features and using it We implement this program
+This program records the time for an object moving in front of webcam. opencv provides alot of cool image processing features and using it we implement this program
