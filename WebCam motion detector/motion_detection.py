@@ -1,10 +1,12 @@
 import cv2, time
 from datetime import datetime
+import pandas as pd
 
 first_frame = None
 video = cv2.VideoCapture(0)
 status_list = [None, None]
 times = []
+df = pd.DataFrame(columns = ["Start", "End"])
 
 if video.isOpened():
     while True:
@@ -55,6 +57,9 @@ if video.isOpened():
     video.release()
     cv2.destroyAllWindows()    
     print(times)
+    for i in range(0, len(times), 2):
+        df = df.append({"Start": times[i], "End": times[i+1]}, ignore_index = True)
+    df.to_csv("Times.csv")
 else:
     print("Got an error because of cam")
     
