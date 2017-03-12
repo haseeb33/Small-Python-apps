@@ -13,4 +13,46 @@ c = r.content
 
 soup = BeautifulSoup(c, "html.parser")
 
-print(soup.prettify())
+allDiv = soup.find_all("div", {"class": "propertyRow"})
+
+
+for i in allDiv:
+    print(i.find("h4", {"class": "propPrice"}).text.replace("\n" , "").replace(" " , ""))
+    print(i.find_all("span", {"class": "propAddressCollapse"})[0].text)
+    print(i.find_all("span", {"class": "propAddressCollapse"})[1].text)
+    try:
+        print(i.find("span", {"class": "infoBed"}).find("b").text)
+    except:
+        print(None)
+    try:
+        print(i.find("span", {"class": "infoSqFt"}).find("b").text)
+    except:
+        print(None)
+    try:
+        print(i.find("span", {"class": "infoValueFullBath"}).find("b").text)
+    except:
+        print(None)
+    try:
+        print(i.find("span", {"class": "infoValueHalfBath"}).find("b").text)
+    except:
+        print(None)
+    
+    for column_group in i.find_all("div", {"class": "columnGroup"}):
+        for feature_group, feature_name in zip(column_group.find_all("span", {"class": "featureGroup"}), column_group.find_all("span", {"class": "featureName"})):
+            if "Lot Size" in feature_group.text:
+                print(feature_name.text)
+    print(" ")
+    
+#print(i.find())
+
+
+#print(allPrices)
+
+
+
+
+
+
+
+
+
