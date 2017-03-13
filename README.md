@@ -59,3 +59,7 @@ This program records the time for an object moving in front of webcam. opencv pr
 ### 4. Webscraping of a real-estate site
 
 Webscraping python program with the help of requests and BeautifulSoup libraries
+
+### 5. Stock Analysis
+
+Program to read stockexchange data for a specific company and represent it in a graph form in your webstie 
