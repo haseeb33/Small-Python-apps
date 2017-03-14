@@ -24,14 +24,15 @@ end = dt.datetime(2016, 9, 16)
 df = data.DataReader(name = "GOOG", data_source = "google", start = start, end = end)
  #GOOG is stock name of google.
  
-fig = figure(x_axis_type = "datetime", width = 1000, height = 300)
+fig = figure(x_axis_type = "datetime", width = 1000, height = 300, responsive = True)
 fig.title = "Candlestick Chart"
- 
+fig.grid.grid_line_alpha = 0.3
 hours_12 = 12*60*60*1000
 df["Status"] = [inc_dec(c, o) for c, o in zip(df.Close, df.Open)]
 df["Average"]  = (df.Open + df.Close)/2
 df["Height"] = abs(df.Open - df.Close)
 
+fig.segment(df.index, df.High, df.index, df.Low, color = "Black")
 fig.rect( df.index[df.Status == "Increase"], df.Average[df.Status == "Increase"], hours_12, df.Height[df.Status == "Increase"], fill_color = "green", line_color = "black")
 fig.rect( df.index[df.Status == "Decrease"], df.Average[df.Status == "Decrease"], hours_12, df.Height[df.Status == "Decrease"], fill_color = "red", line_color = "black")
  
